@@ -1,4 +1,5 @@
 import { MonorepoTsProject } from "@aws/pdk/monorepo";
+import { InfrastructureTsProject } from "@aws/pdk/infrastructure";
 import {
     DocumentationFormat,
     Language,
@@ -14,7 +15,7 @@ const project = new MonorepoTsProject({
   projenrcTs: true,
 });
 
-new TypeSafeApiProject({
+const api = new TypeSafeApiProject({
   parent: project,
   outdir: "packages/api",
   name: "goapi",
@@ -41,5 +42,12 @@ new TypeSafeApiProject({
   handlers: {
       languages: [Language.PYTHON],
   },
+});
+
+new InfrastructureTsProject({
+  parent: project,
+  outdir: "packages/infra",
+  name: "infra",
+  typeSafeApi: api,
 });
 project.synth();

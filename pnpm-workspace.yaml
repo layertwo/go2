@@ -8,3 +8,4 @@ packages:
   - packages/api/generated/runtime/python
   - packages/api/generated/infrastructure/typescript
   - packages/api/generated/runtime/typescript
+  - packages/infra
