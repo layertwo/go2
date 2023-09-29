@@ -16,6 +16,10 @@
 /LICENSE linguist-generated
 /nx.json linguist-generated
 /package.json linguist-generated
+/packages/api/generated/documentation/README.md linguist-generated
+/packages/api/generated/infrastructure/README.md linguist-generated
+/packages/api/generated/runtime/README.md linguist-generated
+/packages/api/handlers/README.md linguist-generated
 /pnpm-lock.yaml linguist-generated
 /pnpm-workspace.yaml linguist-generated
 /tsconfig.dev.json linguist-generated
